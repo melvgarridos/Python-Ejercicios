@@ -37,8 +37,13 @@ while proceso !=  4:
         
     if proceso == 1:
         retiro = float(input("Por favor digite el total a retirar: "))
-        saldo_final = valid_salde - retiro
-        print("Su saldo final es: ", saldo_final)
+
+        if retiro > valid_salde:
+         print("El monto a retirar no puede ser mayor al saldo")
+
+        elif retiro <= valid_salde:
+            saldo_final = valid_salde - retiro
+            print("Su saldo final es: ", saldo_final)
 
         proceso = 4
 
